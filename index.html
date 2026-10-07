@@ -3,105 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ثبت شماره مشتریان</title>
+    <title>Hyper Maze Amirbaba</title>
     <style>
         body {
             font-family: Tahoma, sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: center;
-            width: 90%;
-            max-width: 400px;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin-top: 100px;
         }
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        input[type="tel"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 16px;
-            text-align: center;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        #message {
-            margin-top: 15px;
-            font-size: 14px;
-            font-weight: bold;
+        h1 {
+            color: #00ffcc;
         }
     </style>
 </head>
 <body>
-
-    <div class="card">
-        <h2>ثبت شماره مشتری</h2>
-        <form id="customerForm">
-            <input type="tel" id="phone" placeholder="شماره موبایل را وارد کنید" required dir="ltr">
-            <button type="submit">ثبت شماره</button>
-        </form>
-        <div id="message"></div>
-    </div>
-
-    <script>
-        document.getElementById('customerForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const phoneInput = document.getElementById('phone');
-            const messageDiv = document.getElementById('message');
-            const phone = phoneInput.value;
-
-            messageDiv.style.color = 'black';
-            messageDiv.textContent = 'در حال ثبت...';
-
-            try {
-                const response = await fetch('/add-customer', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ phone: phone })
-                });
-
-                const result = await response.json();
-
-                if (result.success) {
-                    messageDiv.style.color = 'green';
-                    messageDiv.textContent = result.message;
-                    phoneInput.value = '';
-                } else {
-                    messageDiv.style.color = 'red';
-                    messageDiv.textContent = result.message;
-                }
-            } catch (error) {
-                messageDiv.style.color = 'red';
-                messageDiv.textContent = 'خطا در ارتباط با سرور.';
-            }
-        });
-    </script>
-
+    <h1>به فروشگاه Hyper Maze Amirbaba خوش آمدید!</h1>
+    <p>سایت با موفقیت روی Render آنلاین شد.</p>
 </body>
 </html>
