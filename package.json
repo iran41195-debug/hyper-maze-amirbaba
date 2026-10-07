@@ -1,7 +1,7 @@
 {
-  "name": "hyper-store",
+  "name": "hyper-maze-amirbaba",
   "version": "1.0.0",
-  "description": "Hyper Maze Store",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
